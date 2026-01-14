@@ -1,0 +1,30 @@
+bundle:
+  name: {{.project_name}}
+
+
+variables:
+  warehouse_id:
+    description: The ID of the warehouse to use
+
+resources:
+  apps:
+    app:
+      name: "{{.project_name}}"
+      description: "{{.app_description}}"
+      source_code_path: ./
+
+      resources:
+        - name: 'warehouse'
+          sql_warehouse:
+            id: ${var.warehouse_id}
+            permission: 'CAN_USE'
+
+targets:
+  prod:
+    default: true
+    workspace:
+      host: {{workspace_host}}
+
+
+    variables:
+      warehouse_id: {{.sql_warehouse_id}}
