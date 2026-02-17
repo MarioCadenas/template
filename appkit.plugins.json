@@ -7,7 +7,7 @@
       "displayName": "Analytics Plugin",
       "description": "SQL query execution against Databricks SQL Warehouses",
       "package": "@databricks/appkit",
-      "requiredByTemplate": false,
+      "requiredByTemplate": true,
       "resources": {
         "required": [
           {
