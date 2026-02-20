@@ -1,6 +1,6 @@
 {
-  "name": "Minimal Databricks App",
-  "short_name": "Minimal App",
+  "name": "{{.project_name}}",
+  "short_name": "{{.project_name}}",
   "icons": [
     {
       "src": "/favicon-192x192.png",

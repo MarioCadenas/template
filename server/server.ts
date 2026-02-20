@@ -1,8 +1,8 @@
-import { createApp, server, analytics } from '@databricks/appkit';
+import { createApp, analytics, server } from '@databricks/appkit';
 
 createApp({
   plugins: [
-    server(),
     analytics(),
+    server()
   ],
 }).catch(console.error);
